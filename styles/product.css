@@ -1,0 +1,118 @@
+body {
+  padding: 0;
+  margin: 200px 0 200px 0;
+}
+
+.nav {
+  background-color: rgb(214, 83, 162);
+}
+
+.img-container img {
+  height: 500px;
+  width: 400px;
+  margin: 0 80px;
+}
+
+.left-icon img,
+.right-icon img {
+  height: 80px;
+  width: 80px;
+  display: flex;
+}
+
+.main-content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 80px;
+}
+
+.right-side-wrapper {
+  margin: 0 55px;
+}
+
+.right-side-wrapper h3 {
+  color: black;
+  font-family: "Dosis", sans-serif;
+  font-size: x-large;
+}
+
+.right-side-wrapper p {
+  color: black;
+  font-family: "Dosis", sans-serif;
+}
+
+.right-side-wrapper a {
+  color: rgb(214, 83, 162);
+  text-decoration: none;
+}
+
+.right-side-wrapper h4 {
+  color: black;
+  font-family: "Dosis", sans-serif;
+  font-size: large;
+}
+
+button {
+  color: black;
+  font-family: "Dosis", sans-serif;
+  height: 50px;
+  width: 250px;
+  color: black;
+  border-radius: 30px;
+  background-color: rgb(159, 157, 157);
+  border: none;
+  color: white;
+}
+
+.content-item-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0%;
+  margin: 35px 0 0 0;
+  justify-content: space-between;
+}
+
+.content-wrapper {
+  padding: 0%;
+  margin: 0 0 15px 0;
+}
+
+.content-box {
+  border-style: groove;
+  border-style: solid;
+  border-color: ;
+  color: rgb(214, 83, 162);
+}
+
+.content-box p {
+  padding: 0;
+  margin: 8px 0 8px 22px;
+}
+
+.button-box a {
+  color: white;
+  text-decoration: none;
+}
+
+hr {
+  border: 1px solid rgb(214, 83, 162);
+}
+
+.icon-wrap span {
+  height: 50px;
+  width: 450px;
+  display: flex;
+  justify-content: flex-end;
+  color: black;
+}
+
+.descript-container {
+  margin: 0 0 55px 0;
+}
+
+.content-wrapper input {
+  height: 23px;
+  width: 72px;
+}

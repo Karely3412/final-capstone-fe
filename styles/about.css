@@ -1,0 +1,60 @@
+body {
+  padding: 0%;
+  margin: 0%;
+  background-image: url("/img/Fpic.jpeg");
+}
+
+.nav {
+  color: rgb(249, 245, 242);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  /* box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(249, 245, 242);
+}
+
+.about-container h1 {
+  font-family: "La Belle Aurore", cursive;
+  padding: 0%;
+  margin: 230px 0 0 0;
+  font-size: xxx-large;
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  border: 0%;
+  padding: 0%;
+  margin: 5% 23%;
+  width: 50%;
+  height: 50%;
+}
+
+.text-wrapper {
+  font-family: "La Belle Aurore", cursive;
+  padding: 0%;
+  margin: 50px;
+}
+
+.main-container img {
+  border-radius: 360px;
+  transition: 0.5s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+p {
+  font-size: large;
+}
+
+.text-wrapper p {
+  margin: 0% 200px 148px;
+}
+
+.sec-text-wrapper p {
+  margin: 0% 200px 148px;
+  padding: 0%;
+}

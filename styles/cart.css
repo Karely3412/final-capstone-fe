@@ -1,0 +1,25 @@
+body {
+  margin: 100px 0 100px 0;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+}
