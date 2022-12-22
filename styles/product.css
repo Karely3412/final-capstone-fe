@@ -5,6 +5,7 @@ body {
 
 .nav {
   background-color: rgb(214, 83, 162);
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .img-container img {
@@ -76,7 +77,9 @@ button {
 
 .content-wrapper {
   padding: 0%;
-  margin: 0 0 15px 0;
+  margin: 3px 0 -6px 0;
+  display: flex;
+  align-items: center;
 }
 
 .content-box {
@@ -115,4 +118,8 @@ hr {
 .content-wrapper input {
   height: 23px;
   width: 72px;
+}
+
+.right-side-wrapper .content-wrapper h4 {
+  margin: 0 22px 0px 0px;
 }
