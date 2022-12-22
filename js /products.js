@@ -13,20 +13,21 @@ function productFetch() {
       aProducts = json;
       console.log(aProducts);
       inputGenerator();
-      readProductData();
+      readProductData(aProducts);
     });
 }
 
 //this func is concatinating our objet into one single string
-function readProductData() {
+function readProductData(aProductsRead) {
   let sAllHtmlProduct = ""; // <-- this empy string is to convert all our object data into a single string
-  aProducts.forEach((oProductLoop) => {
+  aProductsRead.forEach((oProductLoop) => {
     let sOneProductHtml = createHtmlProduct(oProductLoop); // <--when funcs ARE BEING CALLED THEY ARE SENDING TO THE FUNC
     sAllHtmlProduct = sAllHtmlProduct + sOneProductHtml;
   });
 
   //line 28 will get our conatiner by the id. then will add our converted html stringsn buy using .innerhtml
   document.getElementById("sec-product-wrapper").innerHTML = sAllHtmlProduct;
+  createEventList(); // <-- this is being called after 'document.get' because that is after the elements are being put into the page
 }
 
 function inputGenerator() {
@@ -59,22 +60,26 @@ function optionSelected() {
   const sChosenCategory = document.getElementById("category-filter").value; // <-- we are saving the value choosen by the user in a variable
   if (sChosenCategory == "") {
     // <-- Here we are setting the all option to show all the categories
-    readProductData();
+    readProductData(aProducts);
     return;
   }
   const aProductFilter = aProducts.filter(function (oProductLoop) {
     // <-- we are filtering through all the products only get the category chosen by the user then saving it into a variable
     return oProductLoop.category == sChosenCategory;
   });
-  console.log(aProductFilter);
+  readProductData(aProductFilter);
+}
 
-  // <-- er are doing exactly the same from line 22-25 because we are getting the same info from same place except we're just filtering through it
-  let sAllHtmlProduct = "";
-  aProductFilter.forEach((oProductLoop) => {
-    let sOneProductHtml = createHtmlProduct(oProductLoop);
-    sAllHtmlProduct = sAllHtmlProduct + sOneProductHtml;
-  });
-  document.getElementById("sec-product-wrapper").innerHTML = sAllHtmlProduct;
+function createEventList() {
+  // <--this function will allow user to click and be rerouted to the product page
+  for (
+    let index = 0;
+    index < document.getElementsByClassName("img-container").length;
+    index++
+  ) {
+    const element = document.getElementsByClassName("img-container")[index];
+    console.log(element);
+  }
 }
 
 //this converts html into javascript
