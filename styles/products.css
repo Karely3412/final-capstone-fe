@@ -41,6 +41,8 @@ body {
 
 .product-container .img-container:hover {
   cursor: pointer;
+  height: 220px;
+  width: 200px;
 }
 
 .product-price-container {

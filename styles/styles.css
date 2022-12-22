@@ -90,8 +90,8 @@ li a {
 }
 
 .products-container img {
-  width: 20rem;
-  height: 20rem;
+  width: 300px;
+  height: 200px;
   object-fit: contain;
   padding: 10%;
   flex-direction: row;

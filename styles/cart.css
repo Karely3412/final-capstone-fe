@@ -2,6 +2,11 @@ body {
   margin: 100px 0 100px 0;
 }
 
+.nav {
+  background-color: rgb(214, 83, 162);
+  box-shadow: 0 6px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
 img {
   height: 100px;
   width: 100px;
@@ -12,14 +17,55 @@ img {
   flex-direction: column;
 }
 
-li {
+.nav li {
   display: block;
   text-align: center;
-  padding: 16px;
+  padding: 0px;
   text-decoration: none;
 }
 
-.content-container {
+.content-container,
+.sec-content-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.context-container li {
+  display: block;
+  text-align: center;
+  padding: 0px;
+  width: 100px;
+  text-decoration: none;
+}
+
+.left-content-container .context-container li {
+  color: black;
+  font-family: "Dosis", sans-serif;
+}
+
+h4,
+p {
+  color: black;
+  font-family: "Dosis", sans-serif;
+  font-size: large;
+}
+
+button {
+  color: black;
+  font-family: "Dosis", sans-serif;
+}
+
+.left-content-container {
+  width: 700px;
+}
+
+.right-content-container {
+  width: 400px;
+}
+
+.left-content-container {
+  display: flex;
+  flex-direction: column;
 }
