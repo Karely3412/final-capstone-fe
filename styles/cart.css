@@ -1,5 +1,4 @@
 body {
-  margin: 100px 0 100px 0;
 }
 
 .nav {
@@ -8,14 +7,15 @@ body {
 }
 
 img {
-  height: 100px;
-  width: 100px;
-  color: blue;
+  height: 150px;
+  width: 150px;
 }
 
 .content-container {
   display: flex;
   flex-direction: column;
+  padding: 0;
+  margin: 100px 0;
 }
 
 .nav li {
@@ -25,8 +25,7 @@ img {
   text-decoration: none;
 }
 
-.content-container,
-.sec-content-container {
+.content-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -41,6 +40,11 @@ img {
   text-decoration: none;
 }
 
+.context-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .left-content-container .context-container li {
   color: black;
   font-family: "Dosis", sans-serif;
@@ -50,7 +54,7 @@ h4,
 p {
   color: black;
   font-family: "Dosis", sans-serif;
-  font-size: large;
+  font-size: x-large;
 }
 
 button {
@@ -59,7 +63,7 @@ button {
 }
 
 .left-content-container {
-  width: 700px;
+  width: 750px;
 }
 
 .right-content-container {
@@ -69,4 +73,98 @@ button {
 .left-content-container {
   display: flex;
   flex-direction: column;
+}
+
+hr {
+  border: 1px solid rgb(159, 157, 157);
+  width: 100%;
+}
+
+.bottom-content-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-content-wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-content-wrap .left-text {
+  margin: 0 10px 0 0;
+}
+
+.right-content-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.first-content-container,
+.sec-content-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 30px 65px 30px 0px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.right-content-container .content-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-content-container .bottom-content-wrap button {
+  background-color: black;
+  color: white;
+  opacity: 1;
+  width: 135px;
+  height: 30px;
+  border-radius: 16px;
+  border: 0ch;
+}
+
+.bottom-content-wrap {
+  margin: 15px;
+}
+
+.right-content-container .content-wrap {
+  margin: 53px 0px 125px 0px;
+}
+
+.right-content-container .content-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 0;
+}
+
+.right-content-container .context-wrap {
+  display: flex;
+  flex-direction: row;
+}
+
+.content-container .context-wrap {
+  margin: 0 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.content-container .button-box {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.right-content-container button {
+  background-color: rgb(214, 83, 162);
+  color: white;
+  opacity: 1;
+  width: 413px;
+  height: 50px;
+  border-radius: 16px;
+  border: 0ch;
 }
