@@ -27,7 +27,7 @@ function readProductData(aProductsRead) {
 
   //line 28 will get our conatiner by the id. then will add our converted html stringsn buy using .innerhtml
   document.getElementById("sec-product-wrapper").innerHTML = sAllHtmlProduct;
-  createEventList(); // <-- this is being called after 'document.get' because that is after the elements are being put into the page
+  createEventList(aProductsRead); // <-- this is being called after 'document.get' because that is after the elements are being put into the page
 }
 
 function inputGenerator() {
@@ -70,7 +70,7 @@ function optionSelected() {
   readProductData(aProductFilter);
 }
 
-function createEventList() {
+function createEventList(aProductsRead) {
   // <--this function will allow user to click and be rerouted to the product page
   for (
     let index = 0;
@@ -78,8 +78,42 @@ function createEventList() {
     index++
   ) {
     const element = document.getElementsByClassName("img-container")[index];
-    console.log(element);
+    element.addEventListener("click", function () {
+      localStorage.setItem(
+        "selectedProduct",
+        JSON.stringify(aProductsRead[index])
+      );
+      window.location.href = "product.html";
+    });
+
+    const cartIconElement =
+      document.getElementsByClassName("add-to-cart")[index];
+    cartIconElement.addEventListener("click", function () {
+      addProductToCart(aProductsRead[index]);
+    });
   }
+}
+
+function addProductToCart(oProductAdd) {
+  if (localStorage.getItem("cartItems") == null) {
+    // <-- the first time this runs it'll be as an empty array, because we are setting it as an empty array or else it will default to null.
+    localStorage.setItem("cartItems", "[]");
+  }
+  let aCartItems = localStorage.getItem("cartItems");
+  aCartItems = JSON.parse(aCartItems);
+
+  let nIndexCart = aCartItems.findIndex(function (oProduct) {
+    return oProduct.id == oProductAdd.id;
+  });
+  //TODO: if statement
+  console.log(nIndexCart);
+
+  oProductAdd.quantity = 1;
+  aCartItems.push(oProductAdd);
+
+  localStorage.setItem("cartItems", JSON.stringify(aCartItems));
+
+  console.log(aCartItems);
 }
 
 //this converts html into javascript
@@ -102,7 +136,7 @@ function createHtmlProduct(oProduct) {
     '</div>\
        <div class="icon-wrapper">\
           <span class="material-symbols-outlined"> favorite </span>\
-        <span class="material-symbols-outlined">\
+        <span class="material-symbols-outlined add-to-cart">\
             shopping_cart_checkout\
           </span>\
         </div>\
@@ -119,3 +153,4 @@ function createHtmlProduct(oProduct) {
  * generate the html info for each product
  * get what is extracted in to the html file
  */
+let indexInit = 0;

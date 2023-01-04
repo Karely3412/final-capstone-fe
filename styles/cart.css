@@ -168,3 +168,13 @@ hr {
   border-radius: 16px;
   border: 0ch;
 }
+
+.bottom-content-wrap .left-content-wrap button {
+  background: rgb(159, 157, 157);
+  color: white;
+  opacity: 1;
+  width: 135px;
+  height: 30px;
+  border-radius: 16px;
+  border: 0ch;
+}
