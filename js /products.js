@@ -100,15 +100,15 @@ function addProductToCart(oProductAdd) {
     localStorage.setItem("cartItems", "[]");
   }
   let aCartItems = localStorage.getItem("cartItems");
-  aCartItems = JSON.parse(aCartItems);
+  aCartItems = JSON.parse(aCartItems); // <-- this data comes in as a string but we parse it in order to manipulate it. After parsing it it will become an js object.
 
   let nIndexCart = aCartItems.findIndex(function (oProduct) {
-    return oProduct.id == oProductAdd.id;
+    return oProduct.id == oProductAdd.id; // <-- the .findIndex is returning the first element of an array, if there's none, it will return a -1.
   });
   //TODO: if statement
   console.log(nIndexCart);
 
-  oProductAdd.quantity = 1;
+  oProductAdd.quantity = 1; // <-- this line of code sets it to one... NOTE: ASK FOR CLAIRIFICATION ON THIS!!
   aCartItems.push(oProductAdd);
 
   localStorage.setItem("cartItems", JSON.stringify(aCartItems));
